@@ -19,6 +19,6 @@ FROM climate_air_quality c
 INNER JOIN location l ON l.adm4_pcode = c.adm4_pcode
 LEFT JOIN case_death_table cd ON c.uuid = cd.uuid
    
-WHERE c.date >= '2022-09-01';
+WHERE c.date >= '2022-10-01';
 
 SELECT * FROM phq2_raw LIMIT 10;

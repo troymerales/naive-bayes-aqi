@@ -41,3 +41,5 @@ SELECT
 	END AS new_death
 
 FROM phq2_raw;
+
+SELECT * FROM cleaned_data;

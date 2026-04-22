@@ -1,39 +1,50 @@
-CREATE TABLE case_death_table AS 
+DROP TABLE IF EXISTS case_death_table;
 
-WITH da_agg AS (
-    SELECT uuid, SUM(case_total) AS case_total, SUM(death_total) AS death_total
+CREATE TABLE case_death_table AS
+
+WITH combined AS (
+    SELECT date, adm3_pcode, case_total, death_total
     FROM disease_fhsis_totals
-    GROUP BY uuid
-),
-db_agg AS (
-    SELECT uuid, SUM(case_total) AS case_total, SUM(death_total) AS death_total
+
+    UNION ALL
+
+    SELECT date, adm3_pcode, case_total, death_total
     FROM disease_lgu_disaggregated_totals
-    GROUP BY uuid
-),
-dc_agg AS (
-    SELECT uuid, SUM(case_total) AS case_total
+
+    UNION ALL
+
+    SELECT date, adm3_pcode, case_total, 0
     FROM disease_pidsr_totals
-    GROUP BY uuid
-),
-dd_agg AS (
-    SELECT uuid, SUM(death_total) AS death_total
+
+    UNION ALL
+
+    SELECT date, adm3_pcode, 0, death_total
     FROM disease_psa_totals
-    GROUP BY uuid
+),
+
+agg AS (
+    SELECT 
+        date, 
+        adm3_pcode,
+        SUM(case_total) AS case_count,
+        SUM(death_total) AS death_count
+    FROM combined
+    GROUP BY date, adm3_pcode
 )
 
 SELECT
-    m.uuid,
+    c.uuid,
+    COALESCE(a.case_count, 0) AS case_count,
+    COALESCE(a.death_count, 0) AS death_count
 
-    COALESCE(da_agg.case_total, 0) 
-  + COALESCE(db_agg.case_total, 0) 
-  + COALESCE(dc_agg.case_total, 0) AS case_count,
+FROM climate_air_quality c
+JOIN location l 
+    ON l.adm4_pcode = c.adm4_pcode
 
-    COALESCE(da_agg.death_total, 0) 
-  + COALESCE(db_agg.death_total, 0) 
-  + COALESCE(dd_agg.death_total, 0) AS death_count
-
-FROM climate_air_quality m
-LEFT JOIN da_agg ON m.uuid = da_agg.uuid
-LEFT JOIN db_agg ON m.uuid = db_agg.uuid
-LEFT JOIN dc_agg ON m.uuid = dc_agg.uuid
-LEFT JOIN dd_agg ON m.uuid = dd_agg.uuid;
+LEFT JOIN agg a 
+    ON c.date = a.date 
+   AND l.adm3_pcode = a.adm3_pcode
+   
+WHERE c.date >= '2022-10-01';
+   
+SELECT * FROM case_death_table;
