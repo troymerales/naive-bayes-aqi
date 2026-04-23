@@ -7,8 +7,9 @@
 $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P(x_2) \dots P(x_n)}$$
 
 ---
+## New Case Probability
 
-### PM2.5 (New Case)
+### PM2.5 (new_case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -21,7 +22,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### PM10 (New Case)
+### PM10 (new_case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -34,7 +35,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### NO2 (New Case)
+### NO2 (new_case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -45,7 +46,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### SO2 (New Case)
+### SO2 (new_case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -56,7 +57,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### CO (New Case)
+### CO (new_case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -67,7 +68,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### O3 (New Case)
+### O3 (new_case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -87,12 +88,12 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 | Total | 75,585 | 1.00 |
 
 ---
-Will add mathematical computation of new case tomorrow
+will add mathematical computation of new_case sample tomorrow
 
 
+## New Case Probability
 
-
-Add tables for independent variables (new death) here
+tables for independent variables (new death) here
 
 ### New Death
 
