@@ -8,20 +8,20 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### PM2.5
+### PM2.5 (New Case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
-| IT3 | 29,351 | | | | |
-| IT4 | 22,572 | | | | |
-| IT2 | 15,911 | | | | |
-| IT1 | 5,267 | | | | |
-| AQG | 2,484 | | | | |
+| IT3 | 29,351 | 4,800 | 24,551 | 4,800/75,585 | 24,551 |
+| IT4 | 22,572 | 2,421 | 20,151 | 2,421/75,585 | 20,151/75,585 |
+| IT2 | 15,911 | 4,387 | 11,524 | 4,387/75,585 | 11,524/75,585 |
+| IT1 | 5,267 | 2,813 | 2,454 | 2,813/75,585 | 2,454/75,585 |
+| AQG | 2,484 | 442 | 2042 | 442/75,585 | 2042/75,585 |
 | Total | 75,585 | 14,863 | 60,722 | 1.00 | 1.00 |
 
 ---
 
-### PM10
+### PM10 (New Case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -34,7 +34,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### NO2
+### NO2 (New Case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -47,7 +47,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### SO2
+### SO2 (New Case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -58,7 +58,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### CO
+### CO (New Case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -69,7 +69,7 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 
 ---
 
-### O3
+### O3 (New Case)
 
 | Category | Total Count | Case = True | Case = False | P(x∣True) | P(x∣False) |
 |----------|-------------|-------------|--------------|-----------|------------|
@@ -89,6 +89,12 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 | Total | 75,585 | 1.00 |
 
 ---
+Will add mathematical computation of new case tomorrow :))
+
+
+
+
+Add tables for independent variables (new death) here
 
 ### New Death
 
