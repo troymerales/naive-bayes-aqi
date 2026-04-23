@@ -12,11 +12,11 @@ Raw pollutant data was categorized into variants using the **WHO 2021 Interim Ta
 ### PM2.5 Thresholds
 | Category | Range ($\mu g/m^3$) | Description |
 | :--- | :--- | :--- |
-| **AQG** | $0 - 15$ | WHO Recommended Limit |
-| **IT4** | $16 - 25$ | Interim Target 4 |
-| **IT3** | $26 - 37.5$ | Interim Target 3 |
-| **IT2** | $37.6 - 75$ | Interim Target 2 |
-| **IT1** | $> 75$ | Interim Target 1 |
+| **AQG** | $5$ | WHO Recommended Limit |
+| **IT4** | $10$ | Interim Target 4 |
+| **IT3** | $15$ | Interim Target 3 |
+| **IT2** | $25$ | Interim Target 2 |
+| **IT1** | $35$ | Interim Target 1 |
 
 *Note: Similar logic is applied to NO2, SO2, and CO using 24-hour safety thresholds.*
 
