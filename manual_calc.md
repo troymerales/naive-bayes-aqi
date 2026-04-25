@@ -70,7 +70,35 @@ $$P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}{P(x_1) P
 | Trace | 10,824 | 3,686 | 7,138 | 3,686/14,863 ≈ 0.248 | 7,138/60,722 ≈ 0.118 |
 | Total | 75,585 | 14,863 | 60,722 | 1.00 | 1.00 |
 
-will add mathematical computation of new_death sample later
+---
+
+### New Case
+| Class | Count | P(y) |
+|-------|-------|------|
+| True (New case recorded) | 14,863 | 14,863/75,585 ≈ 0.1966 |
+| False (No new case) | 60,722 | 60,722/75,585 ≈ 0.8034 |
+| Total | 75,585 | 1.00 |
+
+### Sample Cases
+row145 = (IT1, IT2, Heavy, Moderate, Heavy, Heavy)
+
+P(True∣row145)=P(IT1∣True)⋅P(IT2∣True)⋅P(Heavy∣True)⋅P(Moderate∣True)⋅P(Heavy∣True)⋅P(Heavy∣True)⋅P(True)P(row145)P(\text{True} \mid \text{row145}) = \frac{P(\text{IT1} \mid \text{True}) \cdot P(\text{IT2} \mid \text{True}) \cdot P(\text{Heavy} \mid \text{True}) \cdot P(\text{Moderate} \mid \text{True}) \cdot P(\text{Heavy} \mid \text{True}) \cdot P(\text{Heavy} \mid \text{True}) \cdot P(\text{True})}{P(\text{row145})}P(True∣row145)=P(row145)P(IT1∣True)⋅P(IT2∣True)⋅P(Heavy∣True)⋅P(Moderate∣True)⋅P(Heavy∣True)⋅P(Heavy∣True)⋅P(True)​
+P(False∣row145)=P(IT1∣False)⋅P(IT2∣False)⋅P(Heavy∣False)⋅P(Moderate∣False)⋅P(Heavy∣False)⋅P(Heavy∣False)⋅P(False)P(row145)P(\text{False} \mid \text{row145}) = \frac{P(\text{IT1} \mid \text{False}) \cdot P(\text{IT2} \mid \text{False}) \cdot P(\text{Heavy} \mid \text{False}) \cdot P(\text{Moderate} \mid \text{False}) \cdot P(\text{Heavy} \mid \text{False}) \cdot P(\text{Heavy} \mid \text{False}) \cdot P(\text{False})}{P(\text{row145})}P(False∣row145)=P(row145)P(IT1∣False)⋅P(IT2∣False)⋅P(Heavy∣False)⋅P(Moderate∣False)⋅P(Heavy∣False)⋅P(Heavy∣False)⋅P(False)​
+
+P(True∣row145)=281314863×396614863×379014863×373514863×458714863×623714863×1486375585P(\text{True} \mid \text{row145}) = \frac{2813}{14863} \times \frac{3966}{14863} \times \frac{3790}{14863} \times \frac{3735}{14863} \times \frac{4587}{14863} \times \frac{6237}{14863} \times \frac{14863}{75585}P(True∣row145)=148632813​×148633966​×148633790​×148633735​×148634587​×148636237​×7558514863​
+=0.189×0.267×0.255×0.251×0.309×0.420×0.1966= 0.189 \times 0.267 \times 0.255 \times 0.251 \times 0.309 \times 0.420 \times 0.1966=0.189×0.267×0.255×0.251×0.309×0.420×0.1966
+=0.0000824= 0.0000824=0.0000824
+
+P(False∣row145)=245460722×506060722×2130560722×2362260722×2043460722×2794860722×6072275585P(\text{False} \mid \text{row145}) = \frac{2454}{60722} \times \frac{5060}{60722} \times \frac{21305}{60722} \times \frac{23622}{60722} \times \frac{20434}{60722} \times \frac{27948}{60722} \times \frac{60722}{75585}P(False∣row145)=607222454​×607225060​×6072221305​×6072223622​×6072220434​×6072227948​×7558560722​
+=0.040×0.083×0.351×0.389×0.336×0.460×0.8034= 0.040 \times 0.083 \times 0.351 \times 0.389 \times 0.336 \times 0.460 \times 0.8034=0.040×0.083×0.351×0.389×0.336×0.460×0.8034
+=0.0000562= 0.0000562=0.0000562
+
+P(True∣row145)=0.00008240.0000824+0.0000562=0.00008240.0001386=0.595P(\text{True} \mid \text{row145}) = \frac{0.0000824}{0.0000824 + 0.0000562} = \frac{0.0000824}{0.0001386} = \textbf{0.595}P(True∣row145)=0.0000824+0.00005620.0000824​=0.00013860.0000824​=0.595
+P(False∣row145)=0.00005620.0000824+0.0000562=0.00005620.0001386=0.405P(\text{False} \mid \text{row145}) = \frac{0.0000562}{0.0000824 + 0.0000562} = \frac{0.0000562}{0.0001386} = \textbf{0.405}P(False∣row145)=0.0000824+0.00005620.0000562​=0.00013860.0000562​=0.405
+
+From the results above P(True∣row145)>P(False∣row145)P(\text{True} \mid \text{row145}) > P(\text{False} \mid \text{row145})
+P(True∣row145)>P(False∣row145), therefore New Case = True
+
 
 ## New Death Probability
 ### PM2.5 (new_death)
