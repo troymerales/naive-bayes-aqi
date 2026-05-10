@@ -1,6 +1,6 @@
 **Feature Vectors:** {'pm25', 'pm10', 'no2', 'so2', 'co', 'o3'}
 
-**Class Variable:** {'new_case', 'new_death'}
+**Class Variable:** {'new_case'}
 
 **Formula:**
 
